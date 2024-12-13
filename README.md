@@ -63,7 +63,7 @@ npm run build
 
 The application is deployed and can be accessed using the link below:
 
-[Dynamic Event Calendar Application](<deployed_app_url>)
+[Dynamic Event Calendar Application](<https://dynamic-event-calendar-eosin.vercel.app/>)
 
 ---
 
