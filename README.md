@@ -1,50 +1,74 @@
-# React + TypeScript + Vite
+# Dynamic Event Calendar Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Summary of Features
 
-Currently, two official plugins are available:
+This application is a feature-rich, dynamic event calendar built with React.js. The app provides users with an intuitive and seamless interface to manage their schedules and events. Below are the highlights:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### **Core Features:**
+- **Event Management:**
+  - Add, edit, and delete events for specific dates.
+  - Include event details like name, description, start time, end time, and type (Work, Personal, Holiday).
+- **Dynamic Event Rendering:**
+  - Displays events for the selected date in a color-coded list.
+  - Filter events by keyword for easy navigation.
+- **Event Overlap Prevention:**
+  - Alerts users when attempting to schedule overlapping events.
+- **Responsive Design:**
+  - Optimized for both desktop and mobile devices.
 
-## Expanding the ESLint configuration
+### **Data Persistence:**
+- **LocalStorage Integration:**
+  - Automatically saves events to the browser’s local storage.
+  - Events persist across page reloads and browser sessions.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### **Interactive Features:**
+- **Toast Notifications:**
+  - Displays success or error messages for key actions like adding, editing, or deleting events.
+- **User-Friendly Modals:**
+  - Provides a clean and intuitive modal for managing event details.
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Instructions to Run the App Locally
+
+Follow these steps to set up and run the application on your local machine:
+
+### **1. Clone the Repository:**
+```bash
+git clone <repository_url>
+cd <repository_name>
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### **2. Install Dependencies:**
+Make sure you have Node.js and npm installed. Then, run:
+```bash
+npm install
 ```
+
+### **3. Start the Development Server:**
+```bash
+npm start
+```
+The application will be accessible at [http://localhost:5173](http://localhost:5173).
+
+### **4. Build for Production (Optional):**
+To create an optimized build for production:
+```bash
+npm run build
+```
+
+---
+
+## Link to the Deployed App
+
+The application is deployed and can be accessed using the link below:
+
+[Dynamic Event Calendar Application](<deployed_app_url>)
+
+---
+
+### **Additional Notes:**
+- Make sure your browser supports LocalStorage for persistent data handling.
+- For any issues, please raise an issue in the repository or contact the developer.
+
+---
