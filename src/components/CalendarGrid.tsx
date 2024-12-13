@@ -99,6 +99,9 @@ const CalendarGrid: React.FC = () => {
       [dayKey]: [...dayEvents, newEvent],
     });
     setModalOpen(false);
+    toast({
+      description: "Event added successfully!",
+    });
   };
 
   const exportEvents = (format: "json" | "csv") => {
